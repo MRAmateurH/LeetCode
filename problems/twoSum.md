@@ -1,3 +1,3 @@
-# 1. Two Sum
+## 1. Two Sum
 
-## 1.1 Description
+### 1.1 Description
