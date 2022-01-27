@@ -30,4 +30,45 @@ Example 3:
 
 #### Solution 1. Brute Force
 
+Java:
+
+    class Solution {
+        public int[] twoSum(int[] nums, int target) {
+
+            for(int i=0; i<nums.length; i++) {
+                for(int j=i+1; j<nums.length; j++) {
+                    if(nums[i]+nums[j] == target) {
+                        return new int[] {i, j};
+                    }
+                }
+            }
+            //No Answer
+            return new int[] {};
+        }
+    }
+
+Time complexity: O(n^2)
+Space complexity: O(1)
+
 #### Solution 2. Using Hashmap
+
+Java:
+
+    public class Solution {
+        public int[] twoSum(int[] numbers, int target) {
+            HashMap<Integer,Integer> indexMap = new HashMap<Integer,Integer>();
+            for(int i = 0; i < numbers.length; i++){
+                Integer requiredNum = (Integer)(target - numbers[i]);
+                if(indexMap.containsKey(requiredNum)){
+                    int toReturn[] = {indexMap.get(requiredNum), i};
+                    return toReturn;
+                }
+
+                indexMap.put(numbers[i], i);
+            }
+            return null;
+        }
+    }
+
+Time complexity: O(n)
+Space complexity: O(n)
