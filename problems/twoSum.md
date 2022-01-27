@@ -27,3 +27,7 @@ Example 3:
     Output: [0,1]
 
 ### 1.2 Solution
+
+#### Solution 1. Brute Force
+
+#### Solution 2. Using Hashmap
