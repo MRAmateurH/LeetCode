@@ -64,7 +64,6 @@ Java:
                 if(indexMap.containsKey(requiredNum)){
                     return new int[] {indexMap.get(requiredNum), i};
                 }
-
                 indexMap.put(nums[i], i);
             }
             // No answer
