@@ -62,7 +62,6 @@ Java:
             for(int i = 0; i < nums.length; i++){
                 Integer requiredNum = (Integer)(target - nums[i]);
                 if(indexMap.containsKey(requiredNum)){
-                    int toReturn[] = {indexMap.get(requiredNum), i};
                     return new int[] {indexMap.get(requiredNum), i};
                 }
 
