@@ -1,6 +1,6 @@
 ## 1. Two Sum (Easy)
 
-[Leetcode](https://leetcode.com/problems/two-sum/)
+[Leetcode link](https://leetcode.com/problems/two-sum/)
 
 ### 1.1 Description
 
@@ -42,7 +42,7 @@ Java:
                     }
                 }
             }
-            //No Answer
+            // No answer
             return new int[] {};
         }
     }
@@ -57,18 +57,19 @@ Space complexity: O(1)
 Java:
 
     public class Solution {
-        public int[] twoSum(int[] numbers, int target) {
+        public int[] twoSum(int[] nums, int target) {
             HashMap<Integer,Integer> indexMap = new HashMap<Integer,Integer>();
-            for(int i = 0; i < numbers.length; i++){
-                Integer requiredNum = (Integer)(target - numbers[i]);
+            for(int i = 0; i < nums.length; i++){
+                Integer requiredNum = (Integer)(target - nums[i]);
                 if(indexMap.containsKey(requiredNum)){
                     int toReturn[] = {indexMap.get(requiredNum), i};
-                    return toReturn;
+                    return new int[] {indexMap.get(requiredNum), i};
                 }
 
-                indexMap.put(numbers[i], i);
+                indexMap.put(nums[i], i);
             }
-            return null;
+            // No answer
+            return new int[] {};
         }
     }
 
